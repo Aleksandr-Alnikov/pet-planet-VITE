@@ -6,6 +6,9 @@
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pet planet</title>
+    <link rel="preload" href="src/fonts/onest-v6-cyrillic_latin-regular.woff2" type="font/woff2" as="font" crossorigin="">
+    <link rel="preload" href="src/fonts/onest-v6-cyrillic_latin-700.woff2" type="font/woff2" as="font" crossorigin="">
+    <link rel="stylesheet" href="scss/index.scss">
 </head>
 <body>
 <header class="header">
@@ -15,11 +18,11 @@
 </header>
 
 <main>
-    <h1>Товары для твоих любимцев Pet Planet</h1>
+    <h1 class="visually-hidden">Товары для твоих любимцев Pet Planet</h1>
     <section class="hero">
         <div class="container">
-            <h2>Товары для твоих любимцев</h2>
-            <img src="img/tittle.svg" alt="Заголовок магазина">
+            <h2 class="visually-hidden">Товары для твоих любимцев</h2>
+            <img class="hero__title" src="img/tittle.svg" alt="Заголовок магазина">
             <p class="hero__text">
                 Большой выбор домиков, лежанок и кормов для кошек и собак
             </p>
@@ -46,29 +49,31 @@
     </section>
 
     <section class="advantages">
-        <div class="container">
-            <h2 class="advantages__title">Наши преимущества</h2>
-            <ul class="advantages__list">
-                <li class="advantages__item">
-                    <h3 class="advantages__subtitle">Широкий ассортимент</h3>
-                    <p class="advantages__text">
-                        У нас есть все для того, чтобы сделать жизнь вашего любимца комфортной и уютной.
-                    </p>
-                </li>
-                <li class="advantages__item">
-                    <h3 class="advantages__subtitle">Качество и безопасность</h3>
-                    <p class="advantages__text">
-                        Мы тщательно отбираем товары для наших клиентов, уделяя особое внимание качеству и безопасности.
-                    </p>
-                </li>
-                <li class="advantages__item">
-                    <h3 class="advantages__subtitle">Персональный подход</h3>
-                    <p class="advantages__text">
-                        Мы понимаем, что каждый питомец уникален, поэтому предлагаем вам индивидуальные
-                        рекомендации по выбору товаров.
-                    </p>
-                </li>
-            </ul>
+        <div class="advantages__bg">
+            <div class="container">
+                <h2 class="advantages__title">Наши преимущества</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <h3 class="advantages__subtitle">Широкий ассортимент</h3>
+                        <p class="advantages__text">
+                            У нас есть все для того, чтобы сделать жизнь вашего любимца комфортной и уютной.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <h3 class="advantages__subtitle">Качество и безопасность</h3>
+                        <p class="advantages__text">
+                            Мы тщательно отбираем товары для наших клиентов, уделяя особое внимание качеству и безопасности.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <h3 class="advantages__subtitle">Персональный подход</h3>
+                        <p class="advantages__text">
+                            Мы понимаем, что каждый питомец уникален, поэтому предлагаем вам индивидуальные
+                            рекомендации по выбору товаров.
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -86,11 +91,11 @@
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <img src="img/logo.svg" alt="логотип">
+    <div class="container footer__container">
+        <img class="footer__logo" src="img/logo.svg" alt="логотип">
         <div class="footer__info">
             <p class="footer__copyright">©Petshop, 2024</p>
-            <ul class="footer__list">
+            <ul class="footer__social-list">
                 <li class="footer__item">
                     Designer: <a class="footer__link" href="#">Anastasia Ilina</a>
                 </li>

@@ -1,0 +1,69 @@
+@use "../scss/varibles" as *;
+
+.footer {
+  padding: 80px 0 32px;
+  background-color: $green;
+  background-image:  url("../img/lapa.svg");
+  background-repeat: no-repeat;
+  color: $light;
+  background-position: 52% 50px;
+
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "logo contacts"
+      "info contacts";
+  }
+
+  &__logo {
+    width: 332px;
+    grid-area: logo;
+  }
+
+  &__info {
+    grid-area: info;
+  }
+
+  &__copyright {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    margin-bottom: 3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    justify-self: end;
+    font-style: normal;
+  }
+
+  &__email {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
