@@ -1,8 +1,17 @@
 @use "../scss/varibles" as *;
 @use "../scss/fonts" as *;
+@use "../scss/media" as *;
 
 .subscribe {
   padding: 120px 0;
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 80px 0;
+  }
 
   &__form {
     display: flex;
@@ -19,6 +28,15 @@
     line-height: 130%;
     text-align: center;
     color: $green;
+
+    @include laptop {
+      font-size: 44px;
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__field {
@@ -57,6 +75,18 @@
     color: $light;
     display: flex;
     align-items: center;
+    min-width: 209px;
+    justify-content: center;
+
+    @include laptop {
+      padding: 11px 31px;
+    }
+
+    @include mobile {
+      padding: 0;
+      min-width: 54px;
+      padding: 18px 31px;
+    }
 
     &:after {
       content: "";
@@ -64,6 +94,13 @@
       width: 16px;
       height: 16px;
       background-image: url("../img/lucide_arrow-up.svg");
+    }
+  }
+
+  @include mobile {
+    &__button-text {
+      position: fixed;
+      transform: scale(0);
     }
   }
 }
