@@ -9,7 +9,7 @@ const modalCloseButton = document.querySelector('.modal-overlay_close-button');
 const cartCount = cartButton.querySelector('.store__cart-cnt');
 
 
-const createProductCard = ({photoUrl, name, price}) => {
+const createProductCard = ({id, photoUrl, name, price}) => {
     const productCard = document.createElement('li');
     productCard.classList.add('store__item');
     productCard.innerHTML = `
@@ -17,7 +17,7 @@ const createProductCard = ({photoUrl, name, price}) => {
             <img src="${API_URL}${photoUrl}" alt="${name}" class="product__image" width="388" height="261">
             <h3 class="product__title">${name}</h3>
             <p class="product__price">${price}&nbsp;₽</p>
-            <button class="product_btn-add-cart">Заказать</button>
+            <button class="product_btn-add-cart" data-id="${id}">Заказать</button>
         </article>
     `
     return productCard;
@@ -106,8 +106,7 @@ const addToCart = (productName) => {
 
 productList.addEventListener('click', e => {
     if (e.target.closest('.product_btn-add-cart')) {
-        const productCard = e.target.closest('.store__product');
-        const productName = productCard.querySelector('.product__title').textContent;
-        addToCart(productName);
+        const productId = parseInt(e.target.dataset.id, 10);
+        addToCart(productId);
     }
 });
