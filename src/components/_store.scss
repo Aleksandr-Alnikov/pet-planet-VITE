@@ -10,6 +10,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: end;
+      gap: 30px;
+    }
   }
 
   &__categories {
@@ -85,5 +91,6 @@
 
   &__item {
     display: flex;
+    justify-self: center;
   }
 }
